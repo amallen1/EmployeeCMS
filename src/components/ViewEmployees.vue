@@ -73,7 +73,7 @@ export default {
   },
   created() {
     axios
-      .get("/")
+      .get("https://employeecms-vue.herokuapp.com")
       .then((res) => {
         this.employees = res.data;
       })
