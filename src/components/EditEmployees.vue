@@ -54,19 +54,14 @@ export default {
   },
   created() {
     //fetches the data so that we can see it when it update
-    axios
-      .get(`http://localhost:3000/edit-employee/${this.$route.params.id}`)
-      .then((res) => {
-        this.employee = res.data;
-      });
+    axios.get(`/edit-employee/${this.$route.params.id}`).then((res) => {
+      this.employee = res.data;
+    });
   },
   methods: {
     updateEmployee() {
       axios
-        .put(
-          `http://localhost:3000/update-employee/${this.$route.params.id}`,
-          this.employee
-        )
+        .put(`/update-employee/${this.$route.params.id}`, this.employee)
         .then((res) => {
           console.log(res);
           this.$router.push("/view");

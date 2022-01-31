@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     addEmployee() {
-      const apiURL = "http://localhost:3000/create-employee";
+      const apiURL = "/create-employee";
 
       //testing
       // console.log(this.employee.id);

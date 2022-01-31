@@ -73,7 +73,7 @@ export default {
   },
   created() {
     axios
-      .get("http://localhost:3000/")
+      .get("/")
       .then((res) => {
         this.employees = res.data;
       })
@@ -84,7 +84,7 @@ export default {
   methods: {
     deleteEmployee(id) {
       axios
-        .delete(`http://localhost:3000/delete-employee/${id}`)
+        .delete(`/delete-employee/${id}`)
         .then(() => {
           this.employees = this.employees.filter(
             (employee) => employee._id !== id
