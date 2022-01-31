@@ -54,14 +54,14 @@ export default {
   },
   created() {
     //fetches the data so that we can see it when it update
-    axios.get(`https://employee-cms.netlify.app/edit-employee/${this.$route.params.id}`).then((res) => {
+    axios.get(`https://employeecms-vue.herokuapp.com/edit-employee/${this.$route.params.id}`).then((res) => {
       this.employee = res.data;
     });
   },
   methods: {
     updateEmployee() {
       axios
-        .put(`https://employee-cms.netlify.app/update-employee/${this.$route.params.id}`, this.employee)
+        .put(`https://employeecms-vue.herokuapp.com/update-employee/${this.$route.params.id}`, this.employee)
         .then((res) => {
           console.log(res);
           this.$router.push("/view");

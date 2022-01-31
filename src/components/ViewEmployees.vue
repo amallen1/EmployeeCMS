@@ -84,7 +84,7 @@ export default {
   methods: {
     deleteEmployee(id) {
       axios
-        .delete(`https://employee-cms.netlify.app/delete-employee/${id}`)
+        .delete(`https://employeecms-vue.herokuapp.com/delete-employee/${id}`)
         .then(() => {
           this.employees = this.employees.filter(
             (employee) => employee._id !== id

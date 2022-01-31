@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     addEmployee() {
-      const apiURL = "https://employee-cms.netlify.app/create-employee";
+      const apiURL = "https://employeecms-vue.herokuapp.com/create-employee";
 
       //testing
       // console.log(this.employee.id);
