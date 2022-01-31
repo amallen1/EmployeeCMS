@@ -80,7 +80,7 @@ export default {
   },
   methods: {
     addEmployee() {
-      const apiURL = "/create-employee";
+      const apiURL = "https://employee-cms.netlify.app/create-employee";
 
       //testing
       // console.log(this.employee.id);
