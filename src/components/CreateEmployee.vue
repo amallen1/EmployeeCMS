@@ -82,13 +82,6 @@ export default {
     addEmployee() {
       const apiURL = "https://employeecms-vue.herokuapp.com/create-employee";
 
-      //testing
-      // console.log(this.employee.id);
-      // console.log(this.employee.name);
-      // console.log(this.employee.department);
-      // console.log(this.employee.salary);
-      // console.log(this.employee.location);
-
       axios
         .post(apiURL, this.employee)
         .then(() => {
